@@ -36,19 +36,15 @@
                   }
                 }
               </script>
+              {% for slider in sliders %}
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="{% static 'images/img_h_6.jpg' %}" alt="Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                  <img src="{% static 'images/img_h_7.jpg' %}" alt="Image" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                  <img src="{% static 'images/img_h_8.jpg' %}" alt="Image" class="img-fluid">
+                  <img src="/media/{{slider.image}}" alt="Image" class="img-fluid">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
+            {% endfor %}
           </div>
           <div class="col-lg-4 order-lg-1">
             <span class="section-subtitle" data-aos="fade-up">Welcome</span>
@@ -403,7 +399,7 @@
               </script>
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="assets/img/img_h_1.jpg" alt="Image" class="img-fluid">
+                  <img src="{% static 'images/img_h_1.jpg' %}" alt="Image" class="img-fluid">
                   <div class="p-4">
                     <h3 class="text-black h5 mb-3">Modern and clean design</h3>
                     <div class="row">
